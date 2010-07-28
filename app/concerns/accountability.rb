@@ -1,7 +1,11 @@
 module Accountability
-  # Validations
-  validates_presence_of :account
+  extend ActiveSupport::Concern
 
-  # Associations
-  belongs_to :account
+  included do
+    # Validations
+    validates_presence_of :account
+
+    # Associations
+    belongs_to :account
+  end
 end
