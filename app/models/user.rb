@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Accountability
+
   # Validations
   validates :username, 
     :presence => true,
